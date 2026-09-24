@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ប្រព័ន្ធចុះឈ្មោះសិស្ស</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>🎓 ប្រព័ន្ធចុះឈ្មោះសិស្ស</h1>
+  </header>
+
+  <main class="container">
+
+    <!-- ផ្នែកចុះឈ្មោះ -->
+    <section class="card">
+      <h2>📝 ចុះឈ្មោះសិស្ស</h2>
+
+      <form id="regForm" novalidate>
+        <div class="grid">
+          <div class="field">
+            <label for="studentId">Student ID</label>
+            <input type="text" id="studentId" placeholder="ឧ. ST001">
+          </div>
+          <div class="field">
+            <label for="fullName">ឈ្មោះសិស្ស</label>
+            <input type="text" id="fullName" placeholder="បញ្ចូលឈ្មោះសិស្ស">
+          </div>
+          <div class="field">
+            <label for="dob">ថ្ងៃខែឆ្នាំកំណើត</label>
+            <input type="date" id="dob">
+          </div>
+          <div class="field">
+            <label for="gender">ភេទ</label>
+            <select id="gender">
+              <option value="">-- ជ្រើសរើស --</option>
+              <option value="ប្រុស">ប្រុស</option>
+              <option value="ស្រី">ស្រី</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="classSelect">ថ្នាក់</label>
+            <select id="classSelect">
+              <option value="">-- ជ្រើសរើសថ្នាក់ --</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="roomSelect">លេខខូសព្វ</label>
+            <select id="roomSelect" disabled>
+              <option value="">-- ជ្រើសរើសថ្នាក់ --</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="tel-group">
+          <span class="tel-prefix">Tel</span>
+          <input type="tel" id="phone" placeholder="ឧ. 012345678">
+        </div>
+
+        <p id="formMsg" class="msg" role="alert"></p>
+        <button type="submit" class="btn">💾 ចុះឈ្មោះ</button>
+      </form>
+    </section>
+
+    <!-- ផ្នែកស្វែងរក -->
+    <section class="card">
+      <h2>🔍 ស្វែងរកសិស្ស</h2>
+      <input type="text" id="searchId" placeholder="បញ្ចូល Student ID">
+      <button type="button" id="searchBtn" class="btn">🔍 ស្វែងរក</button>
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">© 2026 Digital Student Registration System</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
